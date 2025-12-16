@@ -15,8 +15,9 @@ function Login() {
     setError('');
 
     try {
-      // 🚨 Puerto de Backend ajustado a 4000
-      const API_URL = 'http://localhost:4000/api/v1/auth/login';
+      // ✅ CAMBIO: Ahora intenta usar la variable de Vercel (REACT_APP_API_URL) 
+      // y si no existe, usa tu localhost:4000 de siempre.
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000/api/v1/auth/login';
 
       const response = await fetch(API_URL, {
         method: 'POST',
@@ -44,12 +45,12 @@ function Login() {
     } catch (err) {
       // Falla de red (Backend apagado)
       console.error(err);
-      setError('No se pudo conectar con el servidor. ¿Está el backend corriendo en el puerto 4000?');
+      setError('No se pudo conectar con el servidor. Revisar conexión.');
     }
   };
 
   return (
-    // Estructura de estilos correcta (asumiendo que App.jsx no tiene esta clase)
+    // Estructura de estilos correcta
     <div className="login-page-container">
       <div className="login-card">
 
@@ -84,11 +85,10 @@ function Login() {
         <div className="separator">O</div>
 
         <div className="social-login-container">
-          <button className="social-button google-btn">
+          <button type="button" className="social-button google-btn">
             <i className="fab fa-google"></i> Google
           </button>
-          <button className="social-button github-btn">
-            {/* 🚨 CORRECCIÓN DE SINTAXIS: Se añadió la clase y la comilla de cierre. */}
+          <button type="button" className="social-button github-btn">
             <i className="fab fa-github"></i> GitHub
           </button>
         </div>
