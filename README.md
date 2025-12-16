@@ -22,7 +22,7 @@ Pasos
     Clonar el repositorio:
     Bash
 
-git clone https://github.com/CamilaSerniotti/TPFinal_frontend.git
+git clone https://github.com/CamilaSerniotti/tp-fullstack-frontend-NUEVO-
 cd TPFinal_frontend
 
 Instalar dependencias:
@@ -112,4 +112,4 @@ Camila Serniotti
 
     GitHub: [Camila Serniotti]
 
-    Repositorio del Backend: [Enlace a tu Repositorio Backend]
+    Repositorio del Backend: [https://github.com/CamilaSerniotti/tp-fullstack-backend-NUEVO-.git]
