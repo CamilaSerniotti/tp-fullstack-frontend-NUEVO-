@@ -98,6 +98,20 @@ npm run dev
 # Build para producción
 npm run build
 
+
+IMPORTANTE:
+use  Thunder Client poner
+Post    http://localhost:4000/api/v1/auth/login
+Body    JSON
+En El JSON Content poner esto: 
+{
+    "email": "camilaserniotti@test.com", 
+    "password": "camilarosario" 
+}
+
+de ahi saca la contraseña y el email para ingresar a la aplicacionde listas
+
+
 🔒 Seguridad Implementada
 
     ✅ Rutas protegidas: La ruta principal (/) requiere autenticación JWT.
